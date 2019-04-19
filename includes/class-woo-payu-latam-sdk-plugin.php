@@ -117,7 +117,7 @@ class Woo_Payu_Latam_SDK_Plugin
 
     public function custom_woocommerce_billing_fields($fields)
     {
-        if ($this->getDefaultCountry() !== 'BR' && $this->get_available_payment()) {
+        if ($this->getDefaultCountry() !== 'BR' && $this->getDefaultCountry() !== 'MX' && $this->get_available_payment()) {
             $fields['billing_dni'] = array(
                 'label' => __('DNI', 'woo-payu-latam-sdk'),
                 'placeholder' => _x('Your DNI here....', 'placeholder', 'woo-payu-latam-sdk'),
